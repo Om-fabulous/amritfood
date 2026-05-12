@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
-import Loader from "@/components/Loader";
+import Loader from "@/components/Loader.jsx";
 import MouseGlow from "@/components/MouseGlow";
 
 import {
