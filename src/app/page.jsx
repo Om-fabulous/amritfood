@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 import Loader from "@/components/Loader.jsx";
 import MouseGlow from "@/components/MouseGlow";
 
@@ -127,8 +128,12 @@ export default function Home() {
       >
         {/* Background */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=2070&auto=format&fit=crop"
+            alt="Fresh milk being poured for Amrit Food"
+            fill
+            priority
+            sizes="100vw"
             className="w-full h-full object-cover opacity-30 scale-110"
           />
         </div>
@@ -178,8 +183,12 @@ export default function Home() {
           <div className="hero-image relative">
             <div className="absolute inset-0 bg-white/10 blur-3xl rounded-full"></div>
 
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?q=80&w=1974&auto=format&fit=crop"
+              alt="Premium dairy product presentation"
+              width={900}
+              height={1100}
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="relative rounded-[40px] border border-white/10 shadow-[0_20px_80px_rgba(255,255,255,0.15)]"
             />
 
@@ -282,8 +291,12 @@ export default function Home() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <img
-            src="amritfood1.png"
+          <Image
+            src="/amritfood1.png"
+            alt="Amrit Food facility and product showcase"
+            width={1200}
+            height={900}
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="rounded-[40px]"
           />
         </motion.div>
@@ -348,8 +361,12 @@ export default function Home() {
             viewport={{ once: true }}
             className="overflow-hidden rounded-[40px]"
           >
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1523294587484-bae6cc870010?q=80&w=2070&auto=format&fit=crop"
+              alt="Large scale dairy manufacturing process"
+              width={1200}
+              height={800}
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="hover:scale-110 transition duration-[3000ms]"
             />
           </motion.div>
